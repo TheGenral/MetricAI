@@ -1,0 +1,21 @@
+footer {
+    background-color: #f4f4f4;
+    padding: 20px 0px;
+
+    @media (min-width:425px) {
+        padding: 50px 0px;
+    }
+
+    .footer-link {
+        color: $prmimary;
+        text-decoration: none;
+        padding: 10px 0px;
+
+        &:hover,
+        &::after {
+            text-decoration: none;
+            color: $prmimary;
+
+        }
+    }
+}

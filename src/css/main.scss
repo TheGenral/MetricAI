@@ -1,0 +1,130 @@
+#mainbox {
+    background: url('../../Assets/blob-scene-haikei.svg');
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+    border-radius: 50px;
+    background-size: cover;
+
+    padding: 20px 0px;
+}
+
+#FirstSlide {
+    height: 100vh;
+
+    @media (max-width:765px) {
+        height: 100%;
+    }
+}
+
+#main {
+    /* &::before {
+        content: '';
+        background: url('../../Assets/layered-steps-haikei.svg');
+        position: absolute;
+        top: 0;
+        left: 0;
+
+    }*/
+
+}
+
+.steps,
+.steps>h1,
+.steps>i {
+    font-size: 48px;
+    text-align: center;
+    font-weight: 700;
+    line-height: 76px;
+    color: white;
+    text-align: center;
+
+    @media (max-width:768px) {
+        font-size: 40px;
+        text-align: center;
+        font-weight: 700;
+        line-height: 64px;
+    }
+
+}
+
+#trybutton {
+    border: 5px solid $prmimary;
+    border-radius: 20px;
+    font-weight: 600;
+    width: 75%;
+    color: white;
+    display: block;
+    margin: 0 auto;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+        color: $prmimary;
+        text-decoration: none;
+        background-color: white;
+        border: 5px solid white;
+
+    }
+}
+
+.explainbox {
+    background: url('../../Assets/blob-scene-haikei\ \(1\).svg');
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+    border-radius: 50px;
+    background-size: cover;
+
+    padding: 20px 0px;
+}
+
+#slogan {
+    h1>span {
+        background-color: yellow;
+        border: 5px solid yellow;
+        border-radius: 20px;
+    }
+}
+
+.qustion {
+    border: 1px solid #565556;
+    background-color: #F6F5F5;
+    padding-top: 80.58px;
+    border-radius: 18px;
+
+    .sec {
+        display: flex;
+        align-content: flex-start;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 68px;
+    }
+
+    i {
+        font-size: 2vw;
+    }
+
+    .metricworld {
+        color: $secondry;
+        font-weight: 700;
+        font-family: $fontLogo;
+    }
+
+    .collapsable {
+        width: 100%;
+        display: none;
+        color: #272627;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 38px;
+        margin-bottom: 40px;
+    }
+
+    .qustionhr {
+        margin-bottom: 40px;
+        margin-top: 0;
+    }
+}

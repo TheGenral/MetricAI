@@ -1,0 +1,523 @@
+@import url("https://fonts.googleapis.com/css2?family=Borel&family=Kanit:wght@400;500;700&display=swap");
+@import "https://unpkg.com/open-props";
+.mega-text {
+  font-size: 69px;
+  font-weight: 700;
+  line-height: 112px;
+}
+@media (max-width: 768px) {
+  .mega-text {
+    font-size: 46px;
+    font-weight: 700;
+    line-height: 92px;
+  }
+}
+
+.mega-text-2 {
+  font-size: 57px;
+  font-weight: 700;
+  line-height: 92px;
+}
+@media (max-width: 768px) {
+  .mega-text-2 {
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 76px;
+  }
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 76px;
+}
+@media (max-width: 768px) {
+  h1 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 64px;
+  }
+}
+
+h2 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 64px;
+}
+@media (max-width: 768px) {
+  h2 {
+    font-size: 33px;
+    font-weight: 700;
+    line-height: 56px;
+  }
+}
+
+h3 {
+  font-size: 33px;
+  font-weight: 700;
+  line-height: 56px;
+}
+
+h4 {
+  font-size: 33px;
+  font-weight: 700;
+  line-height: 56px;
+}
+@media (max-width: 768px) {
+  h4 {
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 40px;
+  }
+}
+
+h5 {
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 40px;
+}
+@media (max-width: 768px) {
+  h5 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 32px;
+  }
+}
+
+h6 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 32px;
+}
+@media (max-width: 768px) {
+  h6 {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 28px;
+  }
+}
+
+p {
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.box {
+  height: 400px;
+  width: 75%;
+  border: 1px solid #414142;
+  border-radius: 25%;
+}
+
+a.navbar-brand > * {
+  font-size: 25px;
+  line-height: 1;
+  margin: 0px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.navbar-brand {
+  font-family: "Borel", cursive;
+  font-weight: 400;
+}
+
+h1.navbar-brand {
+  color: white;
+  font-size: 48px;
+  text-align: center;
+}
+
+#mainbox {
+  background: url("../../Assets/blob-scene-haikei.svg");
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+  border-radius: 50px;
+  background-size: cover;
+  padding: 20px 0px;
+}
+
+#FirstSlide {
+  height: 100vh;
+}
+@media (max-width: 765px) {
+  #FirstSlide {
+    height: 100%;
+  }
+}
+
+#main {
+  /* &::before {
+      content: '';
+      background: url('../../Assets/layered-steps-haikei.svg');
+      position: absolute;
+      top: 0;
+      left: 0;
+
+  }*/
+}
+
+.steps,
+.steps > h1,
+.steps > i {
+  font-size: 48px;
+  text-align: center;
+  font-weight: 700;
+  line-height: 76px;
+  color: white;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .steps,
+  .steps > h1,
+  .steps > i {
+    font-size: 40px;
+    text-align: center;
+    font-weight: 700;
+    line-height: 64px;
+  }
+}
+
+#trybutton {
+  border: 5px solid #414142;
+  border-radius: 20px;
+  font-weight: 600;
+  width: 75%;
+  color: white;
+  display: block;
+  margin: 0 auto;
+  text-decoration: none;
+}
+#trybutton:hover, #trybutton:focus {
+  color: #414142;
+  text-decoration: none;
+  background-color: white;
+  border: 5px solid white;
+}
+
+.explainbox {
+  background: url("../../Assets/blob-scene-haikei (1).svg");
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+  border-radius: 50px;
+  background-size: cover;
+  padding: 20px 0px;
+}
+
+#slogan h1 > span {
+  background-color: yellow;
+  border: 5px solid yellow;
+  border-radius: 20px;
+}
+
+.qustion {
+  border: 1px solid #565556;
+  background-color: #F6F5F5;
+  padding-top: 80.58px;
+  border-radius: 18px;
+}
+.qustion .sec {
+  display: flex;
+  align-content: flex-start;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 68px;
+}
+.qustion i {
+  font-size: 2vw;
+}
+.qustion .metricworld {
+  color: #92ad94;
+  font-weight: 700;
+  font-family: "Borel", cursive;
+}
+.qustion .collapsable {
+  width: 100%;
+  display: none;
+  color: #272627;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 38px;
+  margin-bottom: 40px;
+}
+.qustion .qustionhr {
+  margin-bottom: 40px;
+  margin-top: 0;
+}
+
+.boxmetricAI {
+  background: url("../../Assets/BackGroundMetricAI.svg") no-repeat;
+  background-size: cover;
+  border-radius: 30px;
+  width: 100%;
+}
+.boxmetricAI .boxeslogo {
+  width: 50px;
+  height: 50px;
+}
+.boxmetricAI .boxeslogo.first:nth-child(1) {
+  background-color: #414142;
+}
+.boxmetricAI .boxeslogo.first:nth-child(2) {
+  background-color: #92ad94;
+}
+.boxmetricAI .boxeslogo.first:nth-child(3) {
+  background-color: #94b2d3;
+}
+.boxmetricAI .boxeslogo.second:nth-child(1) {
+  background-color: #92ad94;
+  opacity: 0.75;
+}
+.boxmetricAI .boxeslogo.second:nth-child(2) {
+  background-color: #94b2d3;
+  opacity: 0.75;
+}
+.boxmetricAI .boxeslogo.third:nth-child(1) {
+  background-color: #94b2d3;
+  opacity: 0.5;
+}
+.boxmetricAI #finshed div {
+  line-height: 0.1;
+  font-family: "Borel", cursive;
+  font-size: 125px;
+  color: #414142;
+}
+.boxmetricAI #finshed .gap-50 {
+  gap: 50px;
+}
+.boxmetricAI .boxupload {
+  border: 5px solid #414142;
+  padding: 100px;
+  border-radius: 30px;
+}
+.boxmetricAI .boxupload .uploadimgbox {
+  gap: 20px;
+}
+.boxmetricAI .boxupload .fa-upload {
+  font-size: 100px;
+  text-align: center;
+}
+.boxmetricAI .boxupload:hover, .boxmetricAI .boxupload:focus {
+  background-color: #414142;
+}
+.boxmetricAI .boxupload:hover > *, .boxmetricAI .boxupload:focus > * {
+  color: white;
+}
+.boxmetricAI .boxupload:hover.bg-white > *, .boxmetricAI .boxupload:focus.bg-white > * {
+  color: #414142;
+}
+.boxmetricAI .boxupload:hover .sheetchoice, .boxmetricAI .boxupload:focus .sheetchoice {
+  background-color: white;
+  color: #414142;
+}
+
+.label-before, .field input:focus + label::before, .field input:valid + label::before {
+  line-height: 20px;
+  font-size: 12px;
+  top: -10px;
+  background: #fff;
+  padding: 0 6px;
+  left: 9px;
+}
+
+.field {
+  position: relative;
+  margin-bottom: 15px;
+  width: 100%;
+}
+.field select {
+  width: 49%;
+}
+.field label::before {
+  content: attr(title);
+  position: absolute;
+  top: 0;
+  left: 15px;
+  background-color: transparent;
+  line-height: 40px;
+  font-size: 14px;
+  color: #414142;
+  transition: 300ms all;
+}
+.field input {
+  width: 100%;
+  line-height: 40px;
+  padding: 0 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+  color: #222;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+.field input:focus {
+  outline: 0;
+  border-color: blue;
+}
+.field input:valid + label::before {
+  content: attr(data-title);
+  background-color: transparent;
+}
+.field input:focus + label::before {
+  color: #414142;
+  background-color: transparent;
+}
+
+#choseStage {
+  width: 100%;
+  text-align: center;
+}
+
+.sheetchoice {
+  font-family: "Kanit", sans-serif;
+  font-weight: 700;
+  color: white;
+  background: #414142;
+  border: 0;
+  padding: 10px;
+  width: 100%;
+  transform: translateY(calc(var(--y, 0) * 1%)) scale(var(--scale));
+  transition: transform 0.1s;
+  position: relative;
+}
+.sheetchoice:hover {
+  --y: -10;
+  --scale: 1.1;
+  --border-scale: 1;
+}
+.sheetchoice:active {
+  --y: 5%;
+  --scale: 0.9;
+  --border-scale: 0.9, 0.8;
+}
+.sheetchoice:before {
+  content: "";
+  position: absolute;
+  inset: calc(var(--size-3) * -1);
+  border: var(--size-2) solid var(--gray-0);
+  transform: scale(var(--border-scale, 0));
+  transition: transform 0.125s;
+  --angle-one: 105deg;
+  --angle-two: 290deg;
+  --spread-one: 30deg;
+  --spread-two: 40deg;
+  --start-one: calc(var(--angle-one) - (var(--spread-one) * 0.5));
+  --start-two: calc(var(--angle-two) - (var(--spread-two) * 0.5));
+  --end-one: calc(var(--angle-one) + (var(--spread-one) * 0.5));
+  --end-two: calc(var(--angle-two) + (var(--spread-two) * 0.5));
+  mask: conic-gradient(transparent 0 var(--start-one), white var(--start-one) var(--end-one), transparent var(--end-one) var(--start-two), white var(--start-two) var(--end-two), transparent var(--end-two));
+  z-index: -1;
+}
+
+.checked {
+  --y: -10;
+  --scale: 1.1;
+  --border-scale: 1;
+  background-color: WHITE;
+  color: #414142;
+}
+
+#Start {
+  font-family: "Borel", cursive;
+  font-weight: 400;
+  color: white;
+  background: #414142;
+  border: 0;
+  padding: 10px;
+  bottom: 1px;
+  width: 50%;
+  transform: translateY(calc(var(--y, 0) * 1%)) scale(var(--scale));
+  transition: transform 0.1s;
+  position: absolute;
+}
+#Start:hover {
+  --y: -10;
+  --scale: 1.1;
+  --border-scale: 1;
+}
+#Start:active {
+  --y: 5%;
+  --scale: 0.9;
+  --border-scale: 0.9, 0.8;
+}
+#Start:before {
+  content: "";
+  position: absolute;
+  inset: calc(var(--size-3) * -1);
+  border: var(--size-2) solid var(--gray-0);
+  transform: scale(var(--border-scale, 0));
+  transition: transform 0.125s;
+  --angle-one: 105deg;
+  --angle-two: 290deg;
+  --spread-one: 30deg;
+  --spread-two: 40deg;
+  --start-one: calc(var(--angle-one) - (var(--spread-one) * 0.5));
+  --start-two: calc(var(--angle-two) - (var(--spread-two) * 0.5));
+  --end-one: calc(var(--angle-one) + (var(--spread-one) * 0.5));
+  --end-two: calc(var(--angle-two) + (var(--spread-two) * 0.5));
+  mask: conic-gradient(transparent 0 var(--start-one), white var(--start-one) var(--end-one), transparent var(--end-one) var(--start-two), white var(--start-two) var(--end-two), transparent var(--end-two));
+  z-index: -1;
+}
+
+#fineshStage .checkmark {
+  width: 56px;
+  /* height: 56px; */
+  display: block;
+  border-radius: 50%;
+  stroke-width: 2;
+  stroke: transparent;
+  stroke-miterlimit: 10;
+  margin: 0 10px;
+  box-shadow: inset 0px 0px 0px #7ac142;
+  animation: fill 0.4s ease-in-out 0.4s forwards, scale 0.3s ease-in-out 0.9s both;
+}
+#fineshStage .checkmark .checkmark__check {
+  transform-origin: 50% 50%;
+  stroke-dasharray: 48;
+  stroke: white;
+  stroke-dashoffset: 48;
+  animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes scale {
+  0%, 100% {
+    transform: none;
+  }
+  50% {
+    transform: scale3d(1.1, 1.1, 1);
+  }
+}
+@keyframes fill {
+  100% {
+    box-shadow: inset 0px 0px 0px 30px #7ac142;
+  }
+}
+
+footer {
+  background-color: #f4f4f4;
+  padding: 20px 0px;
+}
+@media (min-width: 425px) {
+  footer {
+    padding: 50px 0px;
+  }
+}
+footer .footer-link {
+  color: #414142;
+  text-decoration: none;
+  padding: 10px 0px;
+}
+footer .footer-link:hover, footer .footer-link::after {
+  text-decoration: none;
+  color: #414142;
+}
+
+/*# sourceMappingURL=style.css.map */

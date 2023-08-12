@@ -1,0 +1,368 @@
+@import "https://unpkg.com/open-props";
+$boxessize: 50px;
+
+@function calculateTypeOffset($lh, $fontSize, $descenderHeightScale) {
+    $lineHeightScale: $lh / $fontSize;
+    @return ($lineHeightScale - 1) / 2+$descenderHeightScale;
+}
+
+@mixin basekick($typeSizeModifier, $baseFontSize, $descenderHeightScale, $typeRowSpan, $gridRowHeight, $capHeight) {
+    $fontSize: $typeSizeModifier * $baseFontSize;
+    $lineHeight: $typeRowSpan * $gridRowHeight;
+    $typeOffset: calculateTypeOffset($lineHeight, $fontSize, $descenderHeightScale);
+    $topSpace: $lineHeight - $capHeight * $fontSize;
+    $heightCorrection: 0;
+
+    @if $topSpace >$gridRowHeight {
+        $heightCorrection: $topSpace - ($topSpace % $gridRowHeight);
+    }
+
+    $preventCollapse: 1;
+
+    font-size: #{$fontSize}px;
+    line-height: #{$lineHeight}px;
+    transform: translateY(#{$typeOffset}em);
+    padding-top: $preventCollapse;
+
+    &::before {
+        content: "";
+        margin-top: #{-($heightCorrection + $preventCollapse)}px;
+        display: block;
+        height: 0;
+    }
+}
+
+.boxmetricAI {
+    background: url('../../Assets/BackGroundMetricAI.svg') no-repeat;
+    background-size: cover;
+    border-radius: 30px;
+    width: 100%;
+
+
+    .boxeslogo {
+        width: $boxessize;
+        height: $boxessize;
+
+        &.first:nth-child(1) {
+            background-color: $prmimary;
+        }
+
+        &.first:nth-child(2) {
+            background-color: $secondry;
+
+
+        }
+
+        &.first:nth-child(3) {
+            background-color: $third;
+
+
+        }
+
+
+        &.second:nth-child(1) {
+            background-color: $secondry;
+            opacity: 0.75;
+
+
+        }
+
+        &.second:nth-child(2) {
+            background-color: $third;
+            opacity: 0.75;
+
+
+        }
+
+        &.third:nth-child(1) {
+            background-color: $third;
+            opacity: 0.5;
+
+
+        }
+    }
+
+    #finshed {
+        div {
+            line-height: 0.1;
+            font-family: $fontLogo;
+            font-size: 125px;
+            color: $prmimary
+        }
+
+        .gap-50 {
+            gap: 50px;
+        }
+    }
+
+    .boxupload {
+        border: 5px solid $prmimary;
+        padding: 100px;
+        border-radius: 30px;
+
+        .uploadimgbox {
+            gap: 20px;
+        }
+
+        .fa-upload {
+            font-size: 100px;
+            text-align: center;
+        }
+
+        &:hover,
+        &:focus {
+            background-color: $prmimary;
+
+            &>* {
+                color: white;
+            }
+
+            &.bg-white>* {
+                color: $prmimary;
+            }
+
+            .sheetchoice {
+                background-color: white;
+                color: $prmimary;
+            }
+        }
+
+
+    }
+}
+
+.label-before {
+    line-height: 20px;
+    font-size: 12px;
+    top: -10px;
+    background: #fff;
+    padding: 0 6px;
+    left: 9px;
+}
+
+.field {
+    position: relative;
+    margin-bottom: 15px;
+    width: 100%;
+
+    select {
+        width: 49%;
+    }
+
+    label::before {
+        content: attr(title);
+        position: absolute;
+        top: 0;
+        left: 15px;
+        background-color: transparent;
+        line-height: 40px;
+        font-size: 14px;
+        color: $prmimary;
+        transition: 300ms all;
+    }
+
+    input {
+        width: 100%;
+        line-height: 40px;
+        padding: 0 15px;
+        box-sizing: border-box;
+        font-size: 14px;
+        color: #222;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+
+        &:focus {
+            outline: 0;
+            border-color: blue;
+        }
+
+        &:valid+label::before {
+            @extend .label-before;
+            content: attr(data-title);
+            background-color: transparent;
+
+        }
+
+        &:focus+label::before {
+            @extend .label-before;
+            color: $prmimary;
+            background-color: transparent;
+
+        }
+    }
+
+
+}
+
+#choseStage {
+    width: 100%;
+    text-align: center;
+}
+
+.sheetchoice {
+    font-family: $paragraph_font;
+    font-weight: 700;
+    color: white;
+    background: $prmimary;
+    border: 0;
+    padding: 10px;
+    width: 100%;
+    transform: translateY(calc(var(--y, 0) * 1%)) scale(var(--scale));
+    transition: transform 0.1s;
+    position: relative;
+
+
+
+    &:hover {
+        --y: -10;
+        --scale: 1.1;
+        --border-scale: 1;
+    }
+
+    &:active {
+        --y: 5%;
+        --scale: 0.9;
+        --border-scale: 0.9, 0.8;
+    }
+
+    &:before {
+        content: "";
+        position: absolute;
+        inset: calc(var(--size-3) * -1);
+        border: var(--size-2) solid var(--gray-0);
+        transform: scale(var(--border-scale, 0));
+        transition: transform 0.125s;
+
+        --angle-one: 105deg;
+        --angle-two: 290deg;
+        --spread-one: 30deg;
+        --spread-two: 40deg;
+        --start-one: calc(var(--angle-one) - (var(--spread-one) * 0.5));
+        --start-two: calc(var(--angle-two) - (var(--spread-two) * 0.5));
+        --end-one: calc(var(--angle-one) + (var(--spread-one) * 0.5));
+        --end-two: calc(var(--angle-two) + (var(--spread-two) * 0.5));
+
+        mask: conic-gradient(transparent 0 var(--start-one),
+                white var(--start-one) var(--end-one),
+                transparent var(--end-one) var(--start-two),
+                white var(--start-two) var(--end-two),
+                transparent var(--end-two));
+
+        z-index: -1;
+    }
+}
+
+.checked {
+    --y: -10;
+    --scale: 1.1;
+    --border-scale: 1;
+    background-color: WHITE;
+    color: $prmimary;
+}
+
+#Start {
+    font-family: $fontLogo;
+    font-weight: 400;
+    color: white;
+    background: #414142;
+    border: 0;
+    padding: 10px;
+    bottom: 1px;
+    width: 50%;
+    transform: translateY(calc(var(--y, 0) * 1%)) scale(var(--scale));
+    transition: transform 0.1s;
+    position: absolute;
+
+    @media (max-width:765px) {
+        margin-top: 20px;
+        position: static;
+    }
+
+    &:hover {
+        --y: -10;
+        --scale: 1.1;
+        --border-scale: 1;
+    }
+
+    &:active {
+        --y: 5%;
+        --scale: 0.9;
+        --border-scale: 0.9, 0.8;
+    }
+
+    &:before {
+        content: "";
+        position: absolute;
+        inset: calc(var(--size-3) * -1);
+        border: var(--size-2) solid var(--gray-0);
+        transform: scale(var(--border-scale, 0));
+        transition: transform 0.125s;
+
+        --angle-one: 105deg;
+        --angle-two: 290deg;
+        --spread-one: 30deg;
+        --spread-two: 40deg;
+        --start-one: calc(var(--angle-one) - (var(--spread-one) * 0.5));
+        --start-two: calc(var(--angle-two) - (var(--spread-two) * 0.5));
+        --end-one: calc(var(--angle-one) + (var(--spread-one) * 0.5));
+        --end-two: calc(var(--angle-two) + (var(--spread-two) * 0.5));
+
+        mask: conic-gradient(transparent 0 var(--start-one),
+                white var(--start-one) var(--end-one),
+                transparent var(--end-one) var(--start-two),
+                white var(--start-two) var(--end-two),
+                transparent var(--end-two));
+
+        z-index: -1;
+    }
+}
+
+#fineshStage {
+
+    .checkmark {
+        width: 56px;
+        /* height: 56px; */
+        display: block;
+        border-radius: 50%;
+        stroke-width: 2;
+        stroke: transparent;
+        stroke-miterlimit: 10;
+        margin: 0 10px;
+        box-shadow: inset 0px 0px 0px #7ac142;
+        animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+
+        .checkmark__check {
+            transform-origin: 50% 50%;
+            stroke-dasharray: 48;
+            stroke: white;
+            stroke-dashoffset: 48;
+            animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+        }
+
+        @keyframes stroke {
+            100% {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        @keyframes scale {
+
+            0%,
+            100% {
+                transform: none;
+            }
+
+            50% {
+                transform: scale3d(1.1, 1.1, 1);
+            }
+        }
+
+        @keyframes fill {
+            100% {
+                box-shadow: inset 0px 0px 0px 30px #7ac142;
+            }
+        }
+
+    }
+
+}
